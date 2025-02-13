@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MyRetrofit2API</string>
+    <string name="judul">Judul</string>
 </resources>
