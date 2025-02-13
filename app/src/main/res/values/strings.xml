@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">MyRetrofit2API</string>
     <string name="judul">Judul</string>
+    <string name="ayat">ayat</string>
+    <string name="latin">latin</string>
+    <string name="arti">arti</string>
 </resources>
