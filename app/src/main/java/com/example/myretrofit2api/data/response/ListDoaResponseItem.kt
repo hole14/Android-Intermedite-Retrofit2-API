@@ -2,7 +2,7 @@ package com.example.myretrofit2api.data.response
 
 import com.google.gson.annotations.SerializedName
 
-data class DoaRandomResponseItem(
+data class ListDoaResponseItem(
 
 	@field:SerializedName("ayat")
 	val ayat: String,
