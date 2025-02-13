@@ -3,13 +3,9 @@ package com.example.myretrofit2api.ui
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.myretrofit2api.R
 import com.example.myretrofit2api.data.response.ListDoaResponseItem
 import com.example.myretrofit2api.data.retrofit.ApiConfig
 import com.example.myretrofit2api.databinding.ActivityListDoaBinding
@@ -62,12 +58,13 @@ class ListDoaActivity : AppCompatActivity() {
     }
 
     private fun setListData(doaResponseItems: List<ListDoaResponseItem>) {
-        val listDoa = ArrayList<String>()
+        val listDoa = ArrayList<ListDoaResponseItem>()
         for (doa in doaResponseItems) {
-            listDoa.add(doa.doa)
+            listDoa.add(doa)
 
             val adapter = DoaAdapter(listDoa)
             binding.rcListDoa.adapter = adapter
+
         }
 
     }
