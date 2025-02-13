@@ -4,6 +4,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import androidx.transition.AutoTransition
+import androidx.transition.Transition
+import androidx.transition.TransitionManager
 import com.example.myretrofit2api.data.response.ListDoaResponseItem
 import com.example.myretrofit2api.databinding.ItemDoaBinding
 
@@ -36,9 +39,13 @@ class DoaAdapter(private val listDoa: ArrayList<ListDoaResponseItem>): RecyclerV
                 holder.tvAyat.visibility = View.VISIBLE
                 holder.tvLatin.visibility = View.VISIBLE
                 holder.tvArti.visibility = View.VISIBLE
+                val transition = AutoTransition()
+                transition.duration = 100
+                TransitionManager.beginDelayedTransition(holder.itemView as ViewGroup, transition)
             }
 
         }
+
     }
 
     override fun getItemCount(): Int = listDoa.size

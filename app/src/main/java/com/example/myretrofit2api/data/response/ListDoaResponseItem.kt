@@ -19,5 +19,4 @@ data class ListDoaResponseItem(
 	@field:SerializedName("latin")
 	val latin: String,
 
-	val isExpanded: Boolean = false
 )
